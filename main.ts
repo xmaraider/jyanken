@@ -29,7 +29,9 @@ let b = 0
 let list: number[] = []
 basic.showIcon(IconNames.Yes)
 basic.forever(function () {
-    if (true) {
+    if (0 == 0) {
+    	
+    } else if (0 == 0) {
     	
     } else {
     	
