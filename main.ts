@@ -1,108 +1,79 @@
 radio.onReceivedNumber(function (receivedNumber) {
-    list = []
-    b = list[0]
-    c = list[1]
     list.push(receivedNumber)
-    if (c == 1) {
+    if (a == 1) {
         if (b == 1) {
-            if (a == 1) {
+            if (c == 1) {
                 basic.showIcon(IconNames.Asleep)
-            } else if (a == 2) {
-                basic.showIcon(IconNames.Happy)
-            } else {
+            } else if (c == 2) {
                 basic.showIcon(IconNames.Sad)
+            } else {
+                basic.showIcon(IconNames.Happy)
             }
         } else if (b == 2) {
-            if (a == 1) {
+            if (c == 1) {
                 basic.showIcon(IconNames.Sad)
-            } else if (a == 2) {
-                basic.showIcon(IconNames.Happy)
+            } else if (c == 2) {
+                basic.showIcon(IconNames.Sad)
             } else {
                 basic.showIcon(IconNames.Asleep)
             }
         } else {
-            if (a == 1) {
+            if (c == 1) {
                 basic.showIcon(IconNames.Happy)
-            } else if (a == 2) {
+            } else if (c == 2) {
                 basic.showIcon(IconNames.Asleep)
-            } else {
-                basic.showIcon(IconNames.Happy)
-            }
-        }
-    } else if (c == 2) {
-        if (b == 1) {
-            if (a == 1) {
-                basic.showIcon(IconNames.Happy)
-            } else if (a == 2) {
-                basic.showIcon(IconNames.Happy)
-            } else {
-                basic.showIcon(IconNames.Asleep)
-            }
-        } else if (b == 2) {
-            if (a == 1) {
-                basic.showIcon(IconNames.Sad)
-            } else if (a == 2) {
-                basic.showIcon(IconNames.Asleep)
-            } else {
-                basic.showIcon(IconNames.Sad)
-            }
-        } else {
-            if (a == 1) {
-                basic.showIcon(IconNames.Asleep)
-            } else if (a == 2) {
-                basic.showIcon(IconNames.Sad)
-            } else {
-                basic.showIcon(IconNames.Happy)
-            }
-        }
-    } else if (c == 0) {
-        if (b == 1) {
-            if (a == 1) {
-                basic.showIcon(IconNames.Asleep)
-            } else if (a == 2) {
-                basic.showIcon(IconNames.Happy)
-            } else {
-                basic.showIcon(IconNames.Sad)
-            }
-        } else if (b == 2) {
-            if (a == 1) {
-                basic.showIcon(IconNames.Sad)
-            } else if (a == 2) {
-                basic.showIcon(IconNames.Asleep)
-            } else {
-                basic.showIcon(IconNames.Happy)
-            }
-        } else {
-            if (a == 1) {
-                basic.showIcon(IconNames.Happy)
-            } else if (a == 2) {
-                basic.showIcon(IconNames.Sad)
             } else {
                 basic.showIcon(IconNames.Asleep)
             }
         }
-    } else {
+    } else if (a == 2) {
         if (b == 1) {
-            if (a == 1) {
+            if (c == 1) {
+                basic.showIcon(IconNames.Sad)
+            } else if (c == 2) {
                 basic.showIcon(IconNames.Happy)
-            } else if (a == 2) {
-                basic.showIcon(IconNames.Asleep)
             } else {
-                basic.showIcon(IconNames.Confused)
+                basic.showIcon(IconNames.Asleep)
             }
         } else if (b == 2) {
-            if (a == 1) {
+            if (c == 1) {
+                basic.showIcon(IconNames.Happy)
+            } else if (c == 2) {
                 basic.showIcon(IconNames.Asleep)
-            } else if (a == 2) {
+            } else {
                 basic.showIcon(IconNames.Sad)
+            }
+        } else {
+            if (c == 1) {
+                basic.showIcon(IconNames.Asleep)
+            } else if (c == 2) {
+                basic.showIcon(IconNames.Sad)
+            } else {
+                basic.showIcon(IconNames.Sad)
+            }
+        }
+    } else if (a == 3) {
+        if (b == 1) {
+            if (c == 1) {
+                basic.showIcon(IconNames.Sad)
+            } else if (c == 2) {
+                basic.showIcon(IconNames.Asleep)
+            } else {
+                basic.showIcon(IconNames.Sad)
+            }
+        } else if (b == 2) {
+            if (c == 1) {
+                basic.showIcon(IconNames.Asleep)
+            } else if (c == 2) {
+                basic.showIcon(IconNames.Happy)
             } else {
                 basic.showIcon(IconNames.Happy)
             }
         } else {
-            if (a == 1) {
-                basic.showIcon(IconNames.Happy)
-            } else if (a == 2) {
+            if (c == 1) {
                 basic.showIcon(IconNames.Sad)
+            } else if (c == 2) {
+                basic.showIcon(IconNames.Happy)
             } else {
                 basic.showIcon(IconNames.Asleep)
             }
@@ -112,6 +83,9 @@ radio.onReceivedNumber(function (receivedNumber) {
 input.onButtonPressed(Button.A, function () {
     basic.showIcon(IconNames.SmallSquare)
     a = 1
+    for (let index = 0; index < 2; index++) {
+        radio.sendNumber(a)
+    }
 })
 input.onGesture(Gesture.Shake, function () {
     basic.showIcon(IconNames.Yes)
@@ -123,16 +97,26 @@ input.onGesture(Gesture.Shake, function () {
 input.onButtonPressed(Button.AB, function () {
     basic.showIcon(IconNames.Scissors)
     a = 3
+    for (let index = 0; index < 2; index++) {
+        radio.sendNumber(a)
+    }
 })
 input.onButtonPressed(Button.B, function () {
     basic.showIcon(IconNames.Chessboard)
     a = 2
+    for (let index = 0; index < 2; index++) {
+        radio.sendNumber(a)
+    }
 })
 let a = 0
 let c = 0
 let b = 0
 let list: number[] = []
 basic.showIcon(IconNames.Yes)
+list = []
+radio.setGroup(9)
+b = list[1]
+c = list[2]
 basic.forever(function () {
-    radio.setGroup(9)
+	
 })
