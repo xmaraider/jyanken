@@ -23,7 +23,7 @@ radio.onReceivedNumber(function (receivedNumber) {
             } else if (c == 2) {
                 basic.showIcon(IconNames.Asleep)
             } else {
-                basic.showIcon(IconNames.Asleep)
+                basic.showIcon(IconNames.Sad)
             }
         }
     } else if (a == 2) {
@@ -83,9 +83,7 @@ radio.onReceivedNumber(function (receivedNumber) {
 input.onButtonPressed(Button.A, function () {
     basic.showIcon(IconNames.SmallSquare)
     a = 1
-    for (let index = 0; index < 2; index++) {
-        radio.sendNumber(a)
-    }
+    radio.sendNumber(a)
 })
 input.onGesture(Gesture.Shake, function () {
     basic.showIcon(IconNames.Yes)
@@ -97,16 +95,12 @@ input.onGesture(Gesture.Shake, function () {
 input.onButtonPressed(Button.AB, function () {
     basic.showIcon(IconNames.Scissors)
     a = 3
-    for (let index = 0; index < 2; index++) {
-        radio.sendNumber(a)
-    }
+    radio.sendNumber(a)
 })
 input.onButtonPressed(Button.B, function () {
     basic.showIcon(IconNames.Chessboard)
     a = 2
-    for (let index = 0; index < 2; index++) {
-        radio.sendNumber(a)
-    }
+    radio.sendNumber(a)
 })
 let a = 0
 let c = 0
