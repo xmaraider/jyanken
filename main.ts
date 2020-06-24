@@ -26,83 +26,84 @@ radio.onReceivedNumber(function (receivedNumber) {
                 basic.showIcon(IconNames.Asleep)
             }
         }
-    }
-    if (a == 1) {
-        if (b == 1) {
-            if (c == 1) {
-                basic.showIcon(IconNames.Asleep)
-            } else if (c == 2) {
-                basic.showIcon(IconNames.Sad)
+    } else {
+        if (a == 1) {
+            if (b == 1) {
+                if (c == 1) {
+                    basic.showIcon(IconNames.Asleep)
+                } else if (c == 2) {
+                    basic.showIcon(IconNames.Sad)
+                } else {
+                    basic.showIcon(IconNames.Happy)
+                }
+            } else if (b == 2) {
+                if (c == 1) {
+                    basic.showIcon(IconNames.Sad)
+                } else if (c == 2) {
+                    basic.showIcon(IconNames.Sad)
+                } else {
+                    basic.showIcon(IconNames.Asleep)
+                }
             } else {
-                basic.showIcon(IconNames.Happy)
+                if (c == 1) {
+                    basic.showIcon(IconNames.Happy)
+                } else if (c == 2) {
+                    basic.showIcon(IconNames.Asleep)
+                } else {
+                    basic.showIcon(IconNames.Sad)
+                }
             }
-        } else if (b == 2) {
-            if (c == 1) {
-                basic.showIcon(IconNames.Sad)
-            } else if (c == 2) {
-                basic.showIcon(IconNames.Sad)
+        } else if (a == 2) {
+            if (b == 1) {
+                if (c == 1) {
+                    basic.showIcon(IconNames.Sad)
+                } else if (c == 2) {
+                    basic.showIcon(IconNames.Happy)
+                } else {
+                    basic.showIcon(IconNames.Asleep)
+                }
+            } else if (b == 2) {
+                if (c == 1) {
+                    basic.showIcon(IconNames.Happy)
+                } else if (c == 2) {
+                    basic.showIcon(IconNames.Asleep)
+                } else {
+                    basic.showIcon(IconNames.Sad)
+                }
             } else {
-                basic.showIcon(IconNames.Asleep)
+                if (c == 1) {
+                    basic.showIcon(IconNames.Asleep)
+                } else if (c == 2) {
+                    basic.showIcon(IconNames.Sad)
+                } else {
+                    basic.showIcon(IconNames.Sad)
+                }
             }
-        } else {
-            if (c == 1) {
-                basic.showIcon(IconNames.Happy)
-            } else if (c == 2) {
-                basic.showIcon(IconNames.Asleep)
+        } else if (a == 3) {
+            if (b == 1) {
+                if (c == 1) {
+                    basic.showIcon(IconNames.Sad)
+                } else if (c == 2) {
+                    basic.showIcon(IconNames.Asleep)
+                } else {
+                    basic.showIcon(IconNames.Sad)
+                }
+            } else if (b == 2) {
+                if (c == 1) {
+                    basic.showIcon(IconNames.Asleep)
+                } else if (c == 2) {
+                    basic.showIcon(IconNames.Happy)
+                } else {
+                    basic.showIcon(IconNames.Happy)
+                }
             } else {
-                basic.showIcon(IconNames.Sad)
-            }
-        }
-    } else if (a == 2) {
-        if (b == 1) {
-            if (c == 1) {
-                basic.showIcon(IconNames.Sad)
-            } else if (c == 2) {
-                basic.showIcon(IconNames.Happy)
-            } else {
-                basic.showIcon(IconNames.Asleep)
-            }
-        } else if (b == 2) {
-            if (c == 1) {
-                basic.showIcon(IconNames.Happy)
-            } else if (c == 2) {
-                basic.showIcon(IconNames.Asleep)
-            } else {
-                basic.showIcon(IconNames.Sad)
-            }
-        } else {
-            if (c == 1) {
-                basic.showIcon(IconNames.Asleep)
-            } else if (c == 2) {
-                basic.showIcon(IconNames.Sad)
-            } else {
-                basic.showIcon(IconNames.Sad)
-            }
-        }
-    } else if (a == 3) {
-        if (b == 1) {
-            if (c == 1) {
-                basic.showIcon(IconNames.Sad)
-            } else if (c == 2) {
-                basic.showIcon(IconNames.Asleep)
-            } else {
-                basic.showIcon(IconNames.Sad)
-            }
-        } else if (b == 2) {
-            if (c == 1) {
-                basic.showIcon(IconNames.Asleep)
-            } else if (c == 2) {
-                basic.showIcon(IconNames.Happy)
-            } else {
-                basic.showIcon(IconNames.Happy)
-            }
-        } else {
-            if (c == 1) {
-                basic.showIcon(IconNames.Sad)
-            } else if (c == 2) {
-                basic.showIcon(IconNames.Happy)
-            } else {
-                basic.showIcon(IconNames.Asleep)
+                if (c == 1) {
+                    basic.showIcon(IconNames.Sad)
+                } else if (c == 2) {
+                    basic.showIcon(IconNames.Happy)
+                } else {
+                    basic.showIcon(IconNames.Asleep)
+                }
             }
         }
     }
