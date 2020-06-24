@@ -1,5 +1,32 @@
 radio.onReceivedNumber(function (receivedNumber) {
     list.push(receivedNumber)
+    if (list.length == 1) {
+        if (a == 1) {
+            if (b == 1) {
+                basic.showIcon(IconNames.Asleep)
+            } else if (b == 2) {
+                basic.showIcon(IconNames.Sad)
+            } else {
+                basic.showIcon(IconNames.Happy)
+            }
+        } else if (a == 2) {
+            if (b == 1) {
+                basic.showIcon(IconNames.Happy)
+            } else if (b == 2) {
+                basic.showIcon(IconNames.Asleep)
+            } else {
+                basic.showIcon(IconNames.Confused)
+            }
+        } else {
+            if (b == 1) {
+                basic.showIcon(IconNames.Happy)
+            } else if (b == 2) {
+                basic.showIcon(IconNames.Sad)
+            } else {
+                basic.showIcon(IconNames.Asleep)
+            }
+        }
+    }
     if (a == 1) {
         if (b == 1) {
             if (c == 1) {
