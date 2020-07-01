@@ -14,15 +14,15 @@ radio.onReceivedNumber(function (receivedNumber) {
                 basic.showIcon(IconNames.Happy)
             } else if (b == 2) {
                 basic.showIcon(IconNames.Asleep)
-            } else {
+            } else if (b == 3) {
                 basic.showIcon(IconNames.Confused)
             }
-        } else {
+        } else if (a == 3) {
             if (b == 1) {
                 basic.showIcon(IconNames.Happy)
             } else if (b == 2) {
                 basic.showIcon(IconNames.Sad)
-            } else {
+            } else if (b == 3) {
                 basic.showIcon(IconNames.Asleep)
             }
         }
@@ -44,7 +44,7 @@ radio.onReceivedNumber(function (receivedNumber) {
                 } else {
                     basic.showIcon(IconNames.Asleep)
                 }
-            } else {
+            } else if (false) {
                 if (c == 1) {
                     basic.showIcon(IconNames.Happy)
                 } else if (c == 2) {
@@ -59,7 +59,7 @@ radio.onReceivedNumber(function (receivedNumber) {
                     basic.showIcon(IconNames.Sad)
                 } else if (c == 2) {
                     basic.showIcon(IconNames.Happy)
-                } else {
+                } else if (c == 3) {
                     basic.showIcon(IconNames.Asleep)
                 }
             } else if (b == 2) {
@@ -67,15 +67,15 @@ radio.onReceivedNumber(function (receivedNumber) {
                     basic.showIcon(IconNames.Happy)
                 } else if (c == 2) {
                     basic.showIcon(IconNames.Asleep)
-                } else {
+                } else if (c == 3) {
                     basic.showIcon(IconNames.Sad)
                 }
-            } else {
+            } else if (b == 3) {
                 if (c == 1) {
                     basic.showIcon(IconNames.Asleep)
                 } else if (c == 2) {
                     basic.showIcon(IconNames.Sad)
-                } else {
+                } else if (c == 3) {
                     basic.showIcon(IconNames.Sad)
                 }
             }
@@ -85,7 +85,7 @@ radio.onReceivedNumber(function (receivedNumber) {
                     basic.showIcon(IconNames.Sad)
                 } else if (c == 2) {
                     basic.showIcon(IconNames.Asleep)
-                } else {
+                } else if (c == 3) {
                     basic.showIcon(IconNames.Sad)
                 }
             } else if (b == 2) {
@@ -93,7 +93,7 @@ radio.onReceivedNumber(function (receivedNumber) {
                     basic.showIcon(IconNames.Asleep)
                 } else if (c == 2) {
                     basic.showIcon(IconNames.Happy)
-                } else {
+                } else if (c == 3) {
                     basic.showIcon(IconNames.Happy)
                 }
             } else {
@@ -101,7 +101,7 @@ radio.onReceivedNumber(function (receivedNumber) {
                     basic.showIcon(IconNames.Sad)
                 } else if (c == 2) {
                     basic.showIcon(IconNames.Happy)
-                } else {
+                } else if (c == 3) {
                     basic.showIcon(IconNames.Asleep)
                 }
             }
