@@ -39,7 +39,7 @@ basic.forever(function () {
                 basic.showIcon(IconNames.Asleep)
             } else if (b == 2) {
                 basic.showIcon(IconNames.Sad)
-            } else {
+            } else if (b == 3) {
                 basic.showIcon(IconNames.Happy)
             }
         } else if (a == 2) {
@@ -66,7 +66,7 @@ basic.forever(function () {
                     basic.showIcon(IconNames.Asleep)
                 } else if (c == 2) {
                     basic.showIcon(IconNames.Sad)
-                } else {
+                } else if (c == 3) {
                     basic.showIcon(IconNames.Happy)
                 }
             } else if (b == 2) {
@@ -74,15 +74,15 @@ basic.forever(function () {
                     basic.showIcon(IconNames.Sad)
                 } else if (c == 2) {
                     basic.showIcon(IconNames.Sad)
-                } else {
+                } else if (c == 3) {
                     basic.showIcon(IconNames.Asleep)
                 }
-            } else if (false) {
+            } else if (b == 3) {
                 if (c == 1) {
                     basic.showIcon(IconNames.Happy)
                 } else if (c == 2) {
                     basic.showIcon(IconNames.Asleep)
-                } else {
+                } else if (c == 3) {
                     basic.showIcon(IconNames.Sad)
                 }
             }
@@ -129,7 +129,7 @@ basic.forever(function () {
                 } else if (c == 3) {
                     basic.showIcon(IconNames.Happy)
                 }
-            } else {
+            } else if (b == 3) {
                 if (c == 1) {
                     basic.showIcon(IconNames.Sad)
                 } else if (c == 2) {
